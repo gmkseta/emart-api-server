@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :users, param: :_username
   post '/auth/login', to: 'authentication#login'
   post '/user_auth', to: 'user_auths#create'
+  get '/devices/open', to: "devices#open"
   get '/*a', to: 'application#not_found'
+  
 end
