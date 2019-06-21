@@ -8,8 +8,6 @@ class DevicesController < ApplicationController
             
             response = HTTParty.post(
                 url, 
-                headers: {
-                    'Content-Type'=>'application/json'}, 
                 body: {
                     "username" => @current_user.username
                 }
